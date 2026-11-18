@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Center | HumanSOS AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="emergency-container">
+
+    <header class="emergency-header">
+        <a href="{{ url_for('dashboard') }}">← Dashboard</a>
+        <h2>🚨 Emergency Center</h2>
+    </header>
+
+    <main class="emergency-content">
+
+        <div class="emergency-warning">
+            <h1>Are You In Danger?</h1>
+            <p>Choose the emergency category to get appropriate assistance.</p>
+        </div>
+
+        <div class="emergency-types">
+
+            <button type="button" class="emergency-type" data-type="Medical">
+                🏥
+                <span>Medical Emergency</span>
+            </button>
+
+            <button type="button" class="emergency-type" data-type="Accident">
+                🚗
+                <span>Road Accident</span>
+            </button>
+
+            <button type="button" class="emergency-type" data-type="Personal Safety">
+                🛡️
+                <span>Personal Safety</span>
+            </button>
+
+            <button type="button" class="emergency-type" data-type="Fire">
+                🔥
+                <span>Fire Emergency</span>
+            </button>
+
+            <button type="button" class="emergency-type" data-type="Disaster">
+                🌪️
+                <span>Natural Disaster</span>
+            </button>
+
+            <button type="button" class="emergency-type" data-type="Other">
+                ⚠️
+                <span>Other Emergency</span>
+            </button>
+
+        </div>
+
+        <div class="emergency-location">
+            <h3>📍 Emergency Location</h3>
+            <p id="emergencyLocation">Location not available.</p>
+            <button type="button" class="btn-outline" id="getEmergencyLocation">
+                Fetch Location
+            </button>
+        </div>
+
+        <div class="emergency-action">
+            <p>Use this action only when you need emergency assistance.</p>
+
+            <button type="button" class="sos-button" id="activateSOS">
+                ACTIVATE SOS
+            </button>
+
+            <button type="button" class="btn-outline" id="cancelSOS">
+                Cancel
+            </button>
+
+            <p id="emergencyStatus" role="status">
+                No emergency alert has been sent.
+            </p>
+        </div>
+
+        <div class="official-emergency">
+            <h3>Need immediate assistance?</h3>
+            <p>India Emergency Response Support: 112</p>
+            <a href="tel:112" class="btn-primary">
+                Call Emergency Helpline 112
+            </a>
+        </div>
+
+    </main>
+
+</div>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

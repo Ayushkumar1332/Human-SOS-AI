@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | HumanSOS AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="dashboard-layout">
+
+    <aside class="sidebar">
+
+        <h2>🛡️ HumanSOS <span>AI</span></h2>
+
+        <nav>
+            <a href="{{ url_for('dashboard') }}" class="active">🏠 Dashboard</a>
+            <a href="{{ url_for('assistant') }}">🤖 AI Assistant</a>
+            <a href="{{ url_for('emergency') }}">🚨 Emergency</a>
+            <a href="#contacts">👥 Emergency Contacts</a>
+            <a href="#location">📍 My Location</a>
+            <a href="#first-aid">🩺 First Aid</a>
+        </nav>
+
+        <a href="{{ url_for('logout') }}" class="logout-link">
+            Logout ↗
+        </a>
+
+    </aside>
+
+    <main class="dashboard-main">
+
+        <header class="dashboard-header">
+
+            <div>
+                <h1>Welcome, {{ user_name }}!</h1>
+                <p>Your personal safety dashboard.</p>
+            </div>
+
+            <div class="user-profile">
+                <span>👤</span>
+                <strong>{{ user_name }}</strong>
+            </div>
+
+        </header>
+
+        <section class="welcome-card">
+
+            <div>
+                <span class="tag">HUMANSOS AI PROTECTION</span>
+                <h2>Your Safety Matters</h2>
+                <p>Stay alert. Stay connected. Stay safe.</p>
+            </div>
+
+            <span class="welcome-icon">🛡️</span>
+
+        </section>
+
+        <section class="sos-section">
+
+            <h2>Emergency SOS</h2>
+
+            <p>Only activate when you need emergency assistance.</p>
+
+            <form action="{{ url_for('emergency') }}" method="GET">
+                <button type="submit" class="sos-button">
+                    SOS
+                </button>
+            </form>
+
+            <p class="sos-caption">
+                Press to open emergency activation.
+            </p>
+
+        </section>
+
+        <section class="dashboard-grid">
+
+            <a href="{{ url_for('assistant') }}" class="dashboard-card">
+                <span>🤖</span>
+                <h3>AI Assistant</h3>
+                <p>Talk to your intelligent safety assistant.</p>
+            </a>
+
+            <a href="{{ url_for('emergency') }}" class="dashboard-card">
+                <span>🚨</span>
+                <h3>Emergency Center</h3>
+                <p>Manage emergency assistance.</p>
+            </a>
+
+            <a href="#contacts" class="dashboard-card">
+                <span>👥</span>
+                <h3>Trusted Contacts</h3>
+                <p>Manage your emergency contacts.</p>
+            </a>
+
+            <a href="#location" class="dashboard-card">
+                <span>📍</span>
+                <h3>My Location</h3>
+                <p>View and share your current location.</p>
+            </a>
+
+        </section>
+
+        <section class="dashboard-panel" id="contacts">
+
+            <h2>Emergency Contacts</h2>
+            <p>Your trusted people will be available here.</p>
+
+            <a href="#contacts" class="btn-outline">
+                Manage Contacts
+            </a>
+
+        </section>
+
+        <section class="dashboard-panel" id="location">
+
+            <h2>My Current Location</h2>
+
+            <p>Location sharing requires your permission.</p>
+
+            <button type="button"
+                    class="btn-primary"
+                    id="locationBtn">
+                Get My Location
+            </button>
+
+            <p id="locationResult">
+                Location not fetched yet.
+            </p>
+
+        </section>
+
+        <section class="dashboard-panel" id="first-aid">
+
+            <h2>First Aid Center</h2>
+
+            <p>Access emergency first-aid guidance.</p>
+
+            <a href="{{ url_for('assistant') }}" class="btn-outline">
+                Ask AI Assistant
+            </a>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

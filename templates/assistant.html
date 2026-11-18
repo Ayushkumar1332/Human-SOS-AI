@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant | HumanSOS AI</title>
+>
+</head>
+<body>
+
+<div class="assistant-layout">
+
+    <header class="assistant-header">
+        <a href="{{ url_for('dashboard') }}" class="back-home">
+            ← Dashboard
+        </a>
+
+        <h2>🤖 HumanSOS AI Assistant</h2>
+
+        <span class="status-indicator">● Assistant</span>
+    </header>
+
+    <main class="chat-container">
+
+        <div class="assistant-intro">
+            <span>🤖</span>
+            <h1>How can I help you?</h1>
+            <p>Describe your situation. I will help you find the next safe step.</p>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+
+            <div class="message ai-message">
+                <div class="message-avatar">🤖</div>
+                <div class="message-content">
+                    Hello! I am HumanSOS AI. How can I assist you today?
+                </div>
+            </div>
+
+        </div>
+
+        <form class="chat-input-area" id="chatForm">
+
+            <input type="text" id="userMessage"
+                   placeholder="Describe your situation..."
+                   autocomplete="off" required>
+
+            <button type="button" id="voiceBtn" title="Voice input">
+                🎙️
+            </button>
+
+            <button type="submit" id="sendBtn">
+                ➤
+            </button>
+
+        </form>
+
+        <p class="chat-disclaimer">
+            AI guidance is not a substitute for professional emergency services.
+            In immediate danger, contact local emergency services (112 in India).
+        </p>
+
+    </main>
+
+</div>
+<!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script src="{{ url_for('static', filename='script.js') }}"></script> -->
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

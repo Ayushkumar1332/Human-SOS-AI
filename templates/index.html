@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HumanSOS AI | Intelligent Emergency Help</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">🛡️ HumanSOS <span>AI</span></div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+    </nav>
+
+    <div class="nav-buttons">
+        <a href="{{ url_for('login') }}" class="btn-outline">Login</a>
+        <a href="{{ url_for('register') }}" class="btn-primary">Get Started</a>
+    </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+    <div class="hero-content">
+        <span class="tag">AI POWERED EMERGENCY ASSISTANCE</span>
+
+        <h1>Your Safety.<br>
+            <span>Our Intelligence.</span>
+        </h1>
+
+        <p>
+            HumanSOS AI is your intelligent emergency companion.
+            Get instant assistance, smart safety guidance and
+            emergency support whenever you need it.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="{{ url_for('register') }}" class="btn-primary">
+                Get Started
+            </a>
+            <a href="#features" class="btn-outline">
+                Explore Features
+            </a>
+        </div>
+    </div>
+
+    <div class="hero-visual">
+        <div class="shield-circle">
+            <span>🛡️</span>
+            <h2>24/7</h2>
+            <p>Safety Companion</p>
+        </div>
+    </div>
+</section>
+
+<section class="features" id="features">
+    <div class="section-heading">
+        <span>OUR CAPABILITIES</span>
+        <h2>Intelligent Safety Features</h2>
+        <p>Smart technology designed to help when every second matters.</p>
+    </div>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+            <span>🚨</span>
+            <h3>Smart SOS</h3>
+            <p>Activate an emergency alert and notify your trusted contacts.</p>
+        </div>
+
+        <div class="feature-card">
+            <span>🤖</span>
+            <h3>AI Assistant</h3>
+            <p>Get intelligent emergency guidance through AI conversation.</p>
+        </div>
+
+        <div class="feature-card">
+            <span>📍</span>
+            <h3>Live Location</h3>
+            <p>Share your location with trusted people during emergencies.</p>
+        </div>
+
+        <div class="feature-card">
+            <span>🎙️</span>
+            <h3>Voice SOS</h3>
+            <p>Use voice commands to request emergency assistance.</p>
+        </div>
+
+        <div class="feature-card">
+            <span>🏥</span>
+            <h3>Nearby Help</h3>
+            <p>Find nearby hospitals and emergency services.</p>
+        </div>
+
+        <div class="feature-card">
+            <span>🩺</span>
+            <h3>First Aid Guide</h3>
+            <p>Access basic emergency first-aid instructions.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="about" id="about">
+    <h2>Technology That Protects Lives</h2>
+    <p>
+        HumanSOS AI combines artificial intelligence,
+        location technology and emergency communication
+        to create a smarter safety ecosystem.
+    </p>
+</section>
+</main>
+
+<footer>
+    <h3>🛡️ HumanSOS AI</h3>
+    <p>Intelligent Help. Safer Tomorrow.</p>
+    <p>© 2026 HumanSOS AI. All Rights Reserved.</p>
+</footer>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | HumanSOS AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="auth-body">
+
+<div class="auth-container">
+
+    <div class="auth-brand">
+        <h1>🛡️ HumanSOS <span>AI</span></h1>
+        <p>Join the smarter safety ecosystem.</p>
+    </div>
+
+    <div class="auth-card">
+        <h2>Create Account</h2>
+        <p>Register to protect yourself and your loved ones.</p>
+
+        <form action="{{ url_for('register') }}" method="POST">
+
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" name="name"
+                       placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" name="email"
+                       placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" name="phone"
+                       placeholder="Enter your phone number" required>
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="password"
+                       placeholder="Create password" minlength="8" required>
+            </div>
+
+            <div class="form-group">
+                <label>Confirm Password</label>
+                <input type="password" name="confirm_password"
+                       placeholder="Confirm password" minlength="8" required>
+            </div>
+
+            <div class="form-options">
+                <label>
+                    <input type="checkbox" name="terms" required>
+                    I agree to the Terms and Privacy Policy.
+                </label>
+            </div>
+
+            <button type="submit" class="btn-primary full-btn">
+                Create Account
+            </button>
+
+        </form>
+
+        <p class="auth-switch">
+            Already registered?
+            <a href="{{ url_for('login') }}">Login Here</a>
+        </p>
+
+        <a href="{{ url_for('index') }}" class="back-home">
+            ← Back to Home
+        </a>
+    </div>
+
+</div>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
